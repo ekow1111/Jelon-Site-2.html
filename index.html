@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelon Straßen- und Tiefbau GmbH</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    /* Blurred background overlay */
+    .bg-overlay {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    .bg-overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 0;
+    }
+    .content-overlay {
+      position: relative;
+      z-index: 1;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header / Navbar -->
+  <header class="bg-blue-700 text-white shadow-lg fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <!-- Logo and Name -->
+      <div class="flex items-center space-x-3">
+        <img src="FInal Logo For Jelon.png" alt="Jelon Logo" class="h-12 w-auto">
+        <h1 class="text-xl md:text-2xl font-bold whitespace-nowrap">Jelon Straßen- und Tiefbau GmbH</h1>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 text-lg font-medium">
+        <a href="#services" class="hover:text-blue-200 transition">Leistungen</a>
+        <a href="#gallery" class="hover:text-blue-200 transition">Projekte</a>
+        <a href="#contact" class="hover:text-blue-200 transition">Kontakt</a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button onclick="toggleMenu()" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden bg-blue-800 md:hidden">
+      <nav class="flex flex-col items-center space-y-4 py-4 text-lg font-medium">
+        <a href="#services" onclick="toggleMenu()" class="hover:text-blue-200">Leistungen</a>
+        <a href="#gallery" onclick="toggleMenu()" class="hover:text-blue-200">Projekte</a>
+        <a href="#contact" onclick="toggleMenu()" class="hover:text-blue-200">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section 
+    class="bg-overlay h-[90vh] flex items-center justify-center text-center text-white mt-20"
+    style="background-image: url('heavy-machinery-used-construction-industry-engineering (1).jpg');">
+    <div class="content-overlay max-w-3xl p-8 rounded-2xl">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
+        Ihr Partner für Straßen-, Tief- und Landschaftsbau
+      </h2>
+      <p class="text-base sm:text-lg text-gray-200">
+        Qualität, Zuverlässigkeit und Präzision – seit unserer Gründung unser Fundament.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section 
+    class="bg-overlay py-16 px-6 text-white"
+    style="background-image: url('heavy-machinery-used-construction-industry-engineering (1).jpg');">
+    <div class="content-overlay container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-8 text-blue-200">Über Uns</h3>
+      <div class="flex flex-col md:flex-row items-center justify-center md:space-x-10 space-y-6 md:space-y-0">
+        <img src="Jelon Passport.png" alt="Jelon Gyilfie-Aziz, CEO" 
+             class="w-52 h-52 sm:w-64 sm:h-64 object-cover rounded-2xl shadow-2xl border-4 border-blue-400">
+        <div class="max-w-2xl text-left">
+          <p class="text-base sm:text-lg leading-relaxed mb-4 text-gray-100">
+            Die <strong>Jelon Straßen- und Tiefbau GmbH</strong> mit Sitz in Hamburg bietet umfassende Dienstleistungen im Bereich 
+            Straßenbau, Tiefbau und Garten- und Landschaftsbau. Unser Ziel ist es, Ihre Vision mit handwerklicher Präzision und 
+            technischem Know-how zu verwirklichen.
+          </p>
+          <p class="text-base sm:text-lg leading-relaxed font-semibold text-blue-200">
+            <strong>Jelon Gyilfie-Aziz</strong> – Geschäftsführer und Gründer der Jelon Straßen- und Tiefbau GmbH.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section 
+    id="services"
+    class="bg-overlay py-16"
+    style="background-image: url('heavy-machinery-used-construction-industry-engineering (1).jpg');">
+    <div class="content-overlay container mx-auto px-6 text-white">
+      <h3 class="text-3xl font-semibold text-center mb-10 text-blue-200">Unsere Leistungen</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border border-blue-300 shadow-lg backdrop-blur-md hover:bg-opacity-20 transition">
+          <h4 class="text-xl font-bold mb-3 text-blue-200">Pflasterarbeiten</h4>
+          <p>Professionelle Pflasterarbeiten für Einfahrten, Plätze und Gehwege.</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border border-blue-300 shadow-lg backdrop-blur-md hover:bg-opacity-20 transition">
+          <h4 class="text-xl font-bold mb-3 text-blue-200">Tiefbau (Rohr verlegen)</h4>
+          <p>Fachgerechtes Verlegen von Rohrleitungen und Tiefbauarbeiten aller Art.</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border border-blue-300 shadow-lg backdrop-blur-md hover:bg-opacity-20 transition">
+          <h4 class="text-xl font-bold mb-3 text-blue-200">Gehwege und Verkehrswege</h4>
+          <p>Planung und Bau langlebiger Geh- und Verkehrswege.</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border border-blue-300 shadow-lg backdrop-blur-md hover:bg-opacity-20 transition">
+          <h4 class="text-xl font-bold mb-3 text-blue-200">Asphaltieren</h4>
+          <p>Hochwertige Asphaltarbeiten für Straßen, Parkplätze und Wege.</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border border-blue-300 shadow-lg backdrop-blur-md hover:bg-opacity-20 transition">
+          <h4 class="text-xl font-bold mb-3 text-blue-200">Garten- und Landschaftsbau</h4>
+          <p>Gestaltung und Pflege von Außenanlagen – von der Idee bis zur Umsetzung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-white text-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold mb-10 text-blue-700">Unsere Projekte</h3>
+      <p class="mb-8 text-lg text-gray-700 max-w-2xl mx-auto">
+        Ein Einblick in unsere Arbeit – vom Straßenbau bis zur Landschaftsgestaltung. Qualität, die man sieht.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <img src="IMG-20250914-WA0002.jpg" class="rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="IMG-20250914-WA0003.jpg" class="rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="IMG-20250914-WA0006.jpg" class="rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="IMG-20250914-WA0008.jpg" class="rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="IMG-20250914-WA0011.jpg" class="rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="IMG-20250914-WA0005.jpg" class="rounded-xl shadow-lg hover:scale-105 transform transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section 
+    id="contact"
+    class="bg-overlay py-16 text-white"
+    style="background-image: url('heavy-machinery-used-construction-industry-engineering (1).jpg');">
+    <div class="content-overlay container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold mb-6 text-blue-200">Kontakt</h3>
+      <p class="text-lg mb-2 font-semibold">Jelon Straßen- und Tiefbau GmbH</p>
+      <p>Uferstraße 11A, 22081 Hamburg</p>
+      <p>Tel: <a href="tel:004917645772673" class="underline text-blue-200 hover:text-blue-300">004917645772673</a></p>
+      <p>Email: <a href="mailto:jelonstrassenundtiefbau@outlook.com" class="underline text-blue-200 hover:text-blue-300">
+        jelonstrassenundtiefbau@outlook.com
+      </a></p>
+      <p class="mt-6 italic text-gray-300">„Ihre Vision, unser Fundament“</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-center py-6">
+    <div class="flex flex-col items-center space-y-3">
+      <img src="FInal Logo For Jelon.png" alt="Jelon Logo" class="h-14 w-auto">
+      <p>© 2025 Jelon Straßen- und Tiefbau GmbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
